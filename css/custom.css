@@ -1,0 +1,34 @@
+.list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    background-color: #fff;
+    border-radius: 3px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.list li.plus {
+    border-right: 8px solid #49DE80;
+}
+
+.list li.minus {
+    border-right: 8px solid #F87171;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    padding: 4px;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+}
