@@ -27,7 +27,7 @@ Visit the application here: https://shaky411.github.io/expense-tracker/
 
 ## Screenshots
 
-![Alt text](assets/Screenshot%202023-05-09%20at%2012.05.43.png)
+![Alt text](assets/Screenshot%202023-05-09%20at%2014.04.08.png)
 
 <br>
 
