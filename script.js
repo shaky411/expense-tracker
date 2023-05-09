@@ -78,13 +78,18 @@ function updateValues() {
 
     // console.log(expense)
 
-    if (total < 0) {
-        updateBalanceColor.classList.add('text-red-400');
+    if (total == 0) {
+        updateBalanceColor.classList.add('text-slate-100');
         // balance.innerText = `£${total}`;
+    } else if (total < 0) {
+        updateBalanceColor.classList.remove('text-slate-100');
+        updateBalanceColor.classList.add('text-red-400');
     } else {
         updateBalanceColor.classList.remove('text-red-400');
+        updateBalanceColor.classList.remove('text-slate-100');
         updateBalanceColor.classList.add('text-green-400');
     }
+        
 
     balance.innerText = `£${total}`;
     money_plus.innerText = `£${income}`;
