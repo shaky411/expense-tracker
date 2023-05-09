@@ -5,6 +5,7 @@ const list = document.getElementById('list');
 const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
+const updateBalanceColor = document.querySelector('.balance');
 
 const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
 
@@ -46,7 +47,7 @@ localStorageTransactions : [];
 
 function addTransactionDOM(transaction) {
     // get the sign
-    const sign = transaction.amount < 0 ? '-' : '+'
+    const sign = transaction.amount < 0 ? '- £' : '+ £'
 
     const item = document.createElement('li');
 
@@ -76,6 +77,14 @@ function updateValues() {
     .reduce((acc, item) => (acc += item), 0) * -1).toFixed(2);
 
     // console.log(expense)
+
+    if (total < 0) {
+        updateBalanceColor.classList.add('text-red-400');
+        // balance.innerText = `£${total}`;
+    } else {
+        updateBalanceColor.classList.remove('text-red-400');
+        updateBalanceColor.classList.add('text-green-400');
+    }
 
     balance.innerText = `£${total}`;
     money_plus.innerText = `£${income}`;
