@@ -6,8 +6,6 @@
 
 This is a simple expense tracker. I made this with HTML, JavaScript and styled with TailwindCSS.
 
-Data is from the ExchangeRate-API: https://www.exchangerate-api.com/
-
 <br>
 
 **Table of Contents:**
