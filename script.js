@@ -43,21 +43,29 @@ let transactions =
 localStorage.getItem('transactions') !== null ? 
 localStorageTransactions : [];
 
+let currentTime = new Date();
+let formatDate = currentTime.toDateString()
+
 // Add transactions to DOM list
 
 function addTransactionDOM(transaction) {
     // get the sign
     const sign = transaction.amount < 0 ? '- £' : '+ £'
-
     const item = document.createElement('li');
+    const date = document.createElement('span');
 
     item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
+    date.classList.add('date-span');
+
+    date.innerHTML = `${formatDate}`
 
     item.innerHTML = `
-     ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span> <button class="delete-btn" onClick="removeTransaction(${transaction.id})"><i class="fa-solid fa-trash-can"></i></button>
+    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span> <button class="delete-btn" onClick="removeTransaction(${transaction.id})"><i class="fa-solid fa-trash-can"></i></button>
     `;
 
+    list.appendChild(date);
     list.appendChild(item);
+    
 }
 
 // Update Blance
