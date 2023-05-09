@@ -13,17 +13,16 @@
 
 <body>
 
-    <div class="bg-slate-100 flex justify-center items-center min-h-screen">
+    <div class="bg-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4 p-10 min-h-screen">
 
-        <div
-            class="bg-indigo-500 m-6 flex flex-col justify-center items-start border border-slate-300 p-10 shadow-xl rounded-lg">
+        <div class="bg-indigo-500 flex flex-col p-10 shadow-lg rounded-lg">
             <h4 class="text-lg font-bold text-slate-100"><i class="fa-solid fa-credit-card mr-2"></i>Your Balance</h4>
             <h1 class="text-5xl font-bold text-green-400 tracking-wider" id="balance">£0.00</h1>
 
             <div
-                class="inc-exp-container tracking-wide bg-white flex justify-center items-center border rounded-lg shadow w-full my-6">
+                class="inc-exp-container tracking-wide bg-white flex justify-evenly items-center border rounded-lg shadow w-full my-6">
 
-                <div class="border-r p-4 rounded-l-md">
+                <div class="p-4 rounded-l-md">
                     <h4 class="font-bold">Income</h4>
                     <p id="money-plus" class="money plus text-lg font-bold text-green-500">+£0.00</p>
                 </div>
@@ -35,16 +34,21 @@
 
             </div>
 
+        </div>
 
-            <h3 class="font-bold text-slate-100 border-b block w-full mb-4">History</h3>
+
+
+        <div class="bg-slate-500 row-span-2 p-10 rounded-lg shadow-lg">
+            <h3 class="font-bold text-slate-100 border-b block w-full mb-4"><i
+                    class="fa-solid fa-clock-rotate-left mr-1"></i>History</h3>
 
             <ul id="list" class="list block w-full">
                 <!-- <li class="minus">Cash <span>-£300</span><button class="delete-btn">X</button></li> -->
             </ul>
+        </div>
 
 
-
-
+        <div class="bg-slate-500 rounded-lg p-10 shadow-xl">
             <h3 class="text-lg font-bold text-slate-100 border-b block w-full mt-6 mb-6">Add new transaction <i
                     class="fa-solid fa-circle-down ml-1"></i></h3>
 
@@ -67,16 +71,16 @@
                 </form>
             </div>
 
-            <p class="mt-4 italic text-sm text-slate-300">Powered by <i class="fa-brands fa-square-js text-lg"></i> </p>
-            <a href="https://www.traversymedia.com/" target="_blank" rel="noopener noreferrer" class="text-sm italic text-green-400 mt-1 underline">Course provided by <strong>Traversy Media</strong></a>
+            <p class="mt-4 italic text-sm text-yellow-300">Powered by <i class="fa-brands fa-square-js text-lg"></i>
+            </p>
+            <a href="https://www.traversymedia.com/" target="_blank" rel="noopener noreferrer"
+                class="text-sm italic text-green-400 hover:text-blue-300 duration-300 mt-1 underline">Course provided by
+                <strong>Traversy Media</strong></a>
             <br>
-            <span class="text-slate-300 text-sm">v1.0</span>
-        </div>
-
-        <div class="flex flex-col justify-center items-center">
-
+            <span class="text-slate-300 text-sm">v1.1</span>
 
         </div>
+
 
 
     </div>
