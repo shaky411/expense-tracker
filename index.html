@@ -13,9 +13,12 @@
 
 <body class="bg-slate-100">
 
+
+
     <div class="md:m-20 grid grid-cols-1 md:grid-cols-2 gap-4 p-10 min-h-screen">
 
-        <div class="bg-indigo-500 flex flex-col p-10 shadow-lg rounded-lg">
+
+        <div class="bg-gradient-to-br from-indigo-500 to-pink-500 flex flex-col p-10 shadow-lg rounded-lg">
             <h4 class="text-lg font-bold text-slate-100"><i class="fa-solid fa-credit-card mr-2"></i>Your Balance</h4>
             <h1 class="balance text-5xl font-bold text-green-400 tracking-wider" id="balance">£0.00</h1>
 
@@ -64,8 +67,8 @@
 
 
         <div class="bg-slate-500 rounded-lg p-10 shadow-xl">
-            <h3 class="text-lg font-bold text-slate-100 border-b block w-full mb-4">Add new transaction <i
-                    class="fa-solid fa-circle-down ml-1"></i></h3>
+            <h3 class="text-lg font-bold text-slate-100 border-b block w-full mb-4"><i
+                class="fa-solid fa-circle-down mr-1"></i>Add new transaction </h3>
 
             <div class="flex flex-col">
                 <form class="mt-2" id="form">
@@ -93,6 +96,58 @@
                 <strong>Traversy Media</strong></a>
             <br>
             <span class="text-slate-300 text-sm">v1.3</span>
+        </div>
+
+        <!-- Shopping list Add -->
+        <div class="shopping-container bg-slate-300 rounded-lg p-10 shadow border border-slate-400">
+            <h2 class="text-slate-600 text-lg font-bold"><i class="fa-solid fa-plus mr-1"></i>Add items to your shopping list
+            </h2>
+            <form id="item-form" class="mt-4">
+                <div class="form-control">
+                    <input type="text" class="block w-full form-input p-2 rounded shadow-inner" id="item-input" name="item"
+                        placeholder="Enter Item" />
+                </div>
+                <div class="form-control">
+                    <button type="submit" class="block w-full btn mt-4 bg-indigo-500 hover:bg-indigo-700 duration-300 px-2 py-1 text-slate-100 rounded-md">
+                        <i class="fa-solid fa-circle-plus"></i> Add Item
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    <!-- Filter Items -->
+        <div class="bg-slate-300 row-span-2 rounded-lg p-10 shadow border border-slate-400">
+
+            <h2 class="text-slate-600 text-lg font-bold mb-4"><i class="fa-solid fa-basket-shopping mr-1"></i>Shopping List
+            </h2>
+
+            <div class="filter">
+                <input type="text" class="form-input-filter p-2 rounded shadow-inner" id="filter" placeholder="Filter Items">
+            </div>
+
+            <ul id="item-list" class="items mt-4">
+                <!-- <li class="flex justify-between bg-slate-100 py-1 px-2 my-2 rounded shadow text-slate-600">
+                    Apples
+                    <button class="remove-item btn-link text-red-500">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+                <li class="flex justify-between bg-slate-100 py-1 px-2 my-2 rounded shadow text-slate-600">
+                    Crisps
+                    <button class="remove-item btn-link text-red-500">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+                <li class="flex justify-between bg-slate-100 py-1 px-2 my-2 rounded shadow text-slate-600">
+                    Sausages
+                    <button class="remove-item btn-link text-red-500">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li> -->
+
+            </ul>
+
+            <button id="clear" class="btn-clear bg-slate-700 w-full hover:bg-slate-900 duration-300 p-2 rounded shadow text-white my-4">Clear All</button>
 
         </div>
 
